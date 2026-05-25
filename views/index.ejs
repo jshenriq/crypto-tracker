@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker Pro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/main.js" defer></script>
+  </head>
+
+  <body>
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-wrappper"></div>
+        <div class="hero-left">
+          <h1 class="hero-title"><span>ACOMPANHE</span> Seus Ativos Crypto</h1>
+          <p class="hero-subtitle">
+            Dados de mercado em tempo real, simples e direto, alimentados pela
+            CoinGecko.
+          </p>
+
+          <form class="search-bar" id="searchForm">
+            <input
+              type="text"
+              placeholder="Pesquisar moeda (ex: bitcoin)"
+              name="coin"
+              value="<%= coin ? coin.id : '' %>"
+              id="searchInput"
+            />
+            <button class="search-btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="hero-right">
+          <!-- O card agora preenche 100% da altura da coluna hero-right -->
+          <div
+            class="card"
+            data-coin-id="<%= coin ? coin.id : '' %>"
+            data-coin-name="<%= coin ? coin.name : '' %>"
+            data-large-img="<%= coin ? coin.image.large : '' %>"
+          >
+            <div
+              class="favorite-star"
+              id="favoriteStar"
+              role="button"
+              aria-pressed="false"
+            >
+              <i class="far fa-star empty"></i>
+              <i class="fas fa-star fill"></i>
+            </div>
+
+            <% if (!locals.error) { %>
+            <img
+              src="<%= coin.image.large %>"
+              alt="<%= coin.name %>"
+              class="coin-logo"
+              data-large-img="<%= coin.image.large %>"
+            />
+
+            <div class="info">
+              <h2><%= coin.name %></h2>
+              <span style="margin-top: 8px; color: #3f5986">
+                <%= coin.symbol.toUpperCase() %>
+              </span>
+            </div>
+
+            <% const price=coin.market_data.current_price.usd; const
+            change24h=coin.market_data.price_change_percentage_24h; const
+            isNegative=change24h < 0; %>
+
+            <p class="price">
+              $<%= price.toLocaleString() %>
+              <span
+                class="price-change <%= isNegative ? 'negative' : 'positive' %>"
+              >
+                <i
+                  class="fa-solid <%= isNegative ? 'fa-arrow-down' : 'fa-arrow-up' %>"
+                ></i>
+                <%= change24h.toFixed(2) %>%
+              </span>
+            </p>
+
+            <span class="details-border"></span>
+
+            <div class="details">
+              <div>
+                <p class="label">Market Cap</p>
+                <p>
+                  US$<%= coin.market_data.market_cap.usd.toLocaleString() %>
+                </p>
+              </div>
+              <div>
+                <p class="label">Volume 24h</p>
+                <p>
+                  US$<%= coin.market_data.total_volume.usd.toLocaleString() %>
+                </p>
+              </div>
+            </div>
+
+            <% } else { %>
+            <p class="error" style="text-align: center; padding: 20px">
+              <%= error %>
+            </p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hidden card-error">
+      <i class="fa-solid fa-xmark close-error"></i>
+       <p class="error-message"></p>
+    </div>
+
+    <section class="container favoritos">
+      <div class="fav-title">
+        <h2>Lista de favoritos</h2>
+      </div>
+
+      <div class="fav-card">
+        <table class="fav-table" id="favTable">
+          <thead>
+            <tr>
+              <th>Moeda</th>
+              <th>Preço</th>
+              <th>24h</th>
+              <th>Volume</th>
+              <th>Market Cap</th>
+            </tr>
+          </thead>
+          <tbody id="favList"></tbody>
+        </table>
+
+        <template id="fav-row-template">
+          <tr>
+            <td class="coin-cell">
+              <div class="coin-info">
+                <img class="fav-coin-img" alt="coin logo" />
+                <div>
+                  <span class="coin-name"></span>
+                  <span class="coin-symbol"></span>
+                </div>
+              </div>
+            </td>
+            <td class="price-cell"></td>
+            <td class="change-cell">
+              <i class="fa-solid"></i>
+              <span class="change-text"></span>
+            </td>
+            <td class="volume-cell"></td>
+            <td class="marketcap-cell"></td>
+            <td>
+              <button class="remove-fav" title="Remover dos favoritos">
+                <i class="fas fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+        </template>
+
+        <p id="emptyFavMessage" class="empty-msg">
+          Adicione uma moeda à sua lista de favoritos...
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Feito por Henrique Silva © 2025
+        <span class="social-inline">
+          <a
+            href="https://github.com/teuusuario"
+            target="_blank"
+            class="icon-link"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/teuusuario"
+            target="_blank"
+            class="icon-link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@teuusuario"
+            target="_blank"
+            class="icon-link"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>

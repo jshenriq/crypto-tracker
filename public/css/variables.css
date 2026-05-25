@@ -1,0 +1,24 @@
+/* ========== CORES (mantém apenas variáveis de cor) ========== */
+:root {
+	--color-primary: #4bd8d8;
+	--color-primary-light: #00d9ff;
+	--color-dark-bg: #0b1a3d;
+	--color-dark-card: rgba(0, 0, 0, 0.35);
+	--color-dark-input: rgba(0, 0, 0, 0.2);
+	--color-text-light: #9ca3af;
+	--color-text-white: #ffffff;
+	--color-text-dark: #0b1a3d;
+	--color-border: rgba(255, 255, 255, 0.1);
+	--color-border-light: rgba(255, 255, 255, 0.2);
+	--color-price: #306eff;
+	--color-positive: #22c55e;
+	--color-negative: #ef4444;
+	--color-fav-bg: #1f2937;
+	--color-fav-hover: #2a3442;
+	--color-fav-dark: #111827;
+	--color-fav-icon: #e74c3c;
+	--color-fav-icon-hover: #ef4444;
+	--color-error-border: rgba(255, 0, 0, 0.3);
+	--color-footer-bg: rgba(0, 0, 0, 0.2);
+	--color-icon-hover-bg: rgba(75, 216, 216, 0.1);
+}

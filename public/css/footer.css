@@ -1,0 +1,35 @@
+/* ========== FOOTER ========== */
+.footer {
+	text-align: center;
+	padding: 1.5rem 1rem;
+	color: var(--color-text-light);
+	font-size: 0.9rem;
+	border-top: 1px solid var(--color-border);
+	background-color: var(--color-footer-bg);
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-inline {
+	display: inline-flex;
+	gap: 0.6rem;
+	margin-left: 1rem;
+	vertical-align: middle;
+}
+
+.icon-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 8px;
+	color: var(--color-primary);
+	background: transparent;
+	transition: 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+.icon-link:hover {
+	background: var(--color-icon-hover-bg);
+	color: var(--color-text-white);
+}

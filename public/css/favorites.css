@@ -1,0 +1,194 @@
+/* ========== CONTAINER FAVORITOS ========== */
+.favoritos {
+	width: 100%;
+	position: relative;
+	top: -50px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fav-title {
+	width: 100%;
+	color: var(--color-primary);
+	border-top: 1px solid gray;
+	text-align: center;
+	padding-top: 20px;
+}
+
+/* ========== CARD FAVORITOS ========== */
+.fav-card {
+	background: var(--color-fav-dark);
+	padding: 20px;
+	border-radius: 12px;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.fav-item {
+	display: flex;
+	align-items: center;
+	background: var(--color-fav-bg);
+	padding: 10px 12px;
+	border-radius: 10px;
+	justify-content: space-between;
+	transition: background 0.2s;
+}
+
+.fav-item:hover {
+	background: var(--color-fav-hover);
+}
+
+.fav-img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+}
+
+.fav-info {
+	flex: 1;
+	margin-left: 12px;
+}
+
+.fav-info strong {
+	color: var(--color-text-white);
+}
+
+.fav-info span {
+	color: var(--color-text-light);
+	font-size: 0.85rem;
+}
+
+/* ========== TABELA FAVORITOS ========== */
+.fav-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.fav-table th {
+	text-align: center;
+	padding: 12px 10px;
+	color: var(--color-text-light);
+	font-weight: 600;
+}
+
+.fav-table td {
+	padding: 12px 10px;
+	border-top: 1px solid rgba(31, 41, 55, 1);
+	text-align: center;
+}
+
+.fav-table td:first-child {
+	text-align: left;
+}
+
+.fav-icon {
+	width: 22px;
+	height: 22px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.symbol {
+	color: var(--color-text-light);
+	margin-left: 6px;
+	font-size: 0.85rem;
+}
+
+.empty-msg {
+	text-align: center;
+	color: #6b7280;
+	margin-top: 10px;
+}
+
+/* ========== CÉLULA DE MOEDA ========== */
+.coin-cell {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	justify-content: flex-start;
+}
+
+.fav-coin-img {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+
+.coin-info {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	line-height: 1.1;
+	justify-content: flex-start;
+}
+
+.coin-name {
+	font-weight: 600;
+}
+
+.coin-symbol {
+	font-size: 0.85rem;
+	color: var(--color-text-light);
+}
+
+/* ========== BOTÃO REMOVER FAVORITO ========== */
+.fav-remove {
+	background: transparent;
+	border: none;
+	color: #f87171;
+	font-size: 22px;
+	cursor: pointer;
+	padding: 0 8px;
+	transition: 0.2s;
+}
+
+.fav-remove:hover {
+	color: var(--color-fav-icon-hover);
+	transform: scale(1.2);
+}
+
+.remove-fav {
+	background: none;
+	border: none;
+	color: var(--color-fav-icon);
+	font-size: 18px;
+	cursor: pointer;
+	padding: 6px 8px;
+	border-radius: 50%;
+	transition: all 0.2s;
+}
+
+.remove-fav:hover {
+	background: var(--color-fav-icon);
+	color: var(--color-text-white);
+}
+
+/* ========== ESTRELA FAVORITO ========== */
+.favorite-star {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	cursor: pointer;
+	font-size: 24px;
+	color: #d1d5db;
+	transition: 0.2s;
+}
+
+.favorite-star .fill {
+	display: none;
+	color: gold;
+}
+
+.favorite-star.active .fill {
+	display: inline;
+}
+
+.favorite-star.active .empty {
+	display: none;
+}
+
+.favorite-star:hover {
+	transform: scale(1.1);
+}

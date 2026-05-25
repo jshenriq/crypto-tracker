@@ -1,0 +1,278 @@
+/* ========== RESPONSIVE - 975px ========== */
+@media (max-width: 975px) {
+	.hero-container {
+		height: 100%;
+		flex-direction: column;
+		text-align: left;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.hero-left {
+		align-items: center;
+		flex-basis: auto;
+	}
+
+	.hero-title {
+		font-size: 2.5em;
+	}
+
+	.card {
+		height: auto;
+	}
+
+	.favoritos {
+		padding: 0 30px;
+		width: 100%;
+	}
+
+	.fav-card {
+		width: 100%;
+	}
+
+	.coin-logo {
+		margin-right: 15px;
+	}
+}
+
+/* ========== RESPONSIVE - 976px a 1039px ========== */
+@media (min-width: 976px) and (max-width: 1039px) {
+	.hero-container {
+		height: 100%;
+		flex-direction: column;
+		text-align: center;
+		gap: 3rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-left {
+		align-items: center;
+		flex-basis: unset;
+		width: 100%;
+	}
+
+	.search-bar {
+		max-width: 500px !important;
+	}
+
+	.hero-title {
+		font-size: 2.5em;
+	}
+
+	.card {
+		height: auto;
+		width: 500px;
+	}
+
+	.favoritos {
+		padding: 0 30px;
+		width: 100%;
+	}
+
+	.fav-card {
+		width: 100%;
+	}
+
+	.coin-logo {
+		margin-right: 15px;
+	}
+}
+
+/* ========== RESPONSIVE - 768px ========== */
+@media (max-width: 768px) {
+	.hero-section,
+	.hero-container,
+	.hero-right {
+		width: 100% !important;
+		max-width: 100% !important;
+		padding: 0 10px;
+	}
+
+	.hero-section {
+		width: 100%;
+		padding: 0;
+		min-height: auto;
+	}
+
+	.main-hero-container {
+		flex-direction: column;
+		height: auto;
+		gap: 2rem;
+	}
+
+	.hero-left {
+		width: 100%;
+		align-items: flex-start;
+		text-align: left;
+		padding: 0 10px;
+	}
+
+	.hero-title {
+		font-size: 2.8rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.1rem;
+		margin: 0.5rem 0 1.5rem;
+		max-width: 340px;
+	}
+
+	.hero-right {
+		flex-basis: unset !important;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.card {
+		width: 100%;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, auto);
+		height: auto;
+	}
+
+	.coin-logo {
+		grid-column: 1;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+	}
+
+	.info {
+		grid-column: 2;
+		top: 0;
+		left: 20px;
+	}
+
+	.info h2 {
+		font-size: 1.6rem;
+		flex-wrap: wrap;
+	}
+
+	.info span {
+		font-size: 1.8rem;
+	}
+
+	.price {
+		font-size: 2rem;
+		grid-column: 1 / 4;
+		justify-content: space-around;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.details {
+		padding: 0 15px;
+		padding-top: 20px;
+		flex-direction: column;
+		text-align: center;
+		gap: 12px;
+		justify-self: center;
+	}
+
+	.details-border {
+		top: 0;
+	}
+
+	.fav-title {
+		border: none;
+		margin-top: 30px;
+	}
+
+	.favoritos {
+		padding: 0 20px;
+		margin-top: 30px;
+	}
+
+	.fav-card {
+		width: 100%;
+	}
+
+	/* ========== TABELA RESPONSIVA ========== */
+	.fav-table thead,
+	.fav-table th:nth-child(3),
+	.fav-table th:nth-child(4),
+	.fav-table th:nth-child(5),
+	.fav-table td:nth-child(3),
+	.fav-table td:nth-child(4),
+	.fav-table td:nth-child(5) {
+		display: none;
+	}
+
+	.fav-table tbody tr {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 14px 10px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		position: relative;
+	}
+
+	.fav-table tbody td {
+		border: none !important;
+		padding: 0;
+		background: transparent;
+	}
+
+	.fav-table td:first-child {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.fav-coin-img {
+		width: 32px;
+		height: 32px;
+	}
+
+	.coin-name {
+		font-size: 1rem;
+	}
+
+	.coin-symbol {
+		font-size: 0.8rem;
+		margin-left: 4px;
+		opacity: 0.8;
+	}
+
+	.fav-table td:nth-child(2) {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-price);
+		min-width: 100px;
+		text-align: right;
+	}
+
+	.fav-table td:last-child {
+		padding-left: 10px;
+	}
+
+	.remove-fav {
+		background: transparent;
+		color: var(--color-fav-icon);
+		font-size: 20px;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.2s;
+	}
+
+	.remove-fav:hover {
+		background: rgba(231, 76, 60, 0.3);
+		color: var(--color-text-white);
+	}
+
+	.coin-info div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}

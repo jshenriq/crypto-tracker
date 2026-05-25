@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+
+/* 1. VARIÁVEIS GLOBAIS (cores, tamanhos, tipografia) */
+@import url('./variables.css');
+
+/* 2. RESET E ESTILOS BASE */
+@import url('./reset.css');
+
+/* 3. COMPONENTES PRINCIPAIS (em ordem de aparição) */
+@import url('./hero.css');
+@import url('./card.css');
+@import url('./favorites.css');
+@import url('./footer.css');
+
+/* 4. ANIMAÇÕES E TRANSIÇÕES */
+@import url('./animations.css');
+
+/* 5. MEDIA QUERIES (sempre por último) */
+@import url('./responsive.css');
+
+
